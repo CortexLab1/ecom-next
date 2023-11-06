@@ -24,9 +24,9 @@ import TextField from '@mui/material/TextField';
 import { NEW_REVIEW_RESET } from '../../constants/productConstants';
 import { addItemsToCart } from '../../actions/cartAction';
 import { getDeliveryDate, getDiscount } from '../../utils/functions';
-import { addToWishlist, removeFromWishlist } from '../../actions/wishlistAction';
 import MinCategory from '../Layouts/MinCategory';
 import MetaData from '../Layouts/MetaData';
+import { addToWishlist, removeFromWishlist } from '@/store/Features/WishList/wishlistSlice';
 
 const ProductDetails = () => {
 

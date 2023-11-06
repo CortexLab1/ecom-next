@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addItemsToCart, removeItemsFromCart } from '../../actions/cartAction';
 import { getDeliveryDate, getDiscount } from '../../utils/functions';
 import { saveForLater } from '../../actions/saveForLaterAction';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, quantity, inCart }) => {
 
@@ -24,7 +24,7 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
         if (quantity <= 1) return;
         dispatch(addItemsToCart(id, newQty));
     }
-    
+
     const removeCartItem = (id) => {
         dispatch(removeItemsFromCart(id));
         enqueueSnackbar("Product Removed From Cart", { variant: "success" });
@@ -86,8 +86,8 @@ const CartItem = ({ product, name, seller, price, cuttedPrice, image, stock, qua
                 {/* <!-- quantity --> */}
                 {inCart && (
                     <>
-                    <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">SAVE FOR LATER</button>
-                    <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVE</button>
+                        <button onClick={() => saveForLaterHandler(product)} className="sm:ml-4 font-medium hover:text-primary-blue">SAVE FOR LATER</button>
+                        <button onClick={() => removeCartItem(product)} className="font-medium hover:text-red-600">REMOVE</button>
                     </>
                 )}
             </div>

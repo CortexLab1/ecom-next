@@ -1,9 +1,9 @@
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import { getRandomProducts } from '../../../utils/functions';
 import { settings } from '../DealSlider/DealSlider';
 import Product from './Product';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
 const ProductSlider = ({ title, tagline }) => {
 

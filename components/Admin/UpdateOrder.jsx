@@ -8,7 +8,7 @@ import { UPDATE_ORDER_RESET } from '../../constants/orderConstants';
 import { formatDate } from '../../utils/functions';
 import TrackStepper from '../Order/TrackStepper';
 import Loading from './Loading';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import MetaData from '../Layouts/MetaData';
 

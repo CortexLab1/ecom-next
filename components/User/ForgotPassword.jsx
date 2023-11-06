@@ -1,6 +1,6 @@
 import TextField from '@mui/material/TextField';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearErrors, forgotPassword } from '../../actions/userAction';
 import { useSnackbar } from 'notistack';

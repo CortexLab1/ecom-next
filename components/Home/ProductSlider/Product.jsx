@@ -1,10 +1,10 @@
 import { getDiscount } from '../../../utils/functions';
 import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToWishlist, removeFromWishlist } from '../../../actions/wishlistAction';
 import { useSnackbar } from 'notistack';
+import Link from 'next/link';
+import { addToWishlist, removeFromWishlist } from '@/store/Features/WishList/wishlistSlice';
 
 const Product = (props) => {
 
@@ -14,11 +14,11 @@ const Product = (props) => {
     const { enqueueSnackbar } = useSnackbar();
 
     const { wishlistItems } = useSelector((state) => state.wishlist);
-    
+
     const itemInWishlist = wishlistItems.some((i) => i.product === _id);
 
     const addToWishlistHandler = () => {
-        if(itemInWishlist) {
+        if (itemInWishlist) {
             dispatch(removeFromWishlist(_id));
             enqueueSnackbar("Remove From Wishlist", { variant: "success" });
         } else {

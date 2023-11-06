@@ -1,10 +1,10 @@
 import StarIcon from '@mui/icons-material/Star';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { getDiscount } from '../../utils/functions';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToWishlist, removeFromWishlist } from '../../actions/wishlistAction';
 import { useSnackbar } from 'notistack';
+import { addToWishlist, removeFromWishlist } from '@/store/Features/WishList/wishlistSlice';
 
 const Product = ({ _id, name, images, ratings, numOfReviews, price, cuttedPrice }) => {
 

@@ -1,9 +1,9 @@
 import Product from './Product';
 import Slider from 'react-slick';
 import { NextBtn, PreviousBtn } from '../Banner/Banner';
-import { Link } from 'react-router-dom';
 import { offerProducts } from '../../../utils/constants';
 import { getRandomProducts } from '../../../utils/functions';
+import Link from 'next/link';
 
 export const settings = {
     dots: false,
@@ -51,11 +51,11 @@ const DealSlider = ({ title }) => {
             <hr />
             {/* <!-- header --> */}
 
-                <Slider {...settings}>
-                    {getRandomProducts(offerProducts, 12).map((item, i) => (
-                        <Product {...item} key={i} />
-                    ))}
-                </Slider>
+            <Slider {...settings}>
+                {getRandomProducts(offerProducts, 12).map((item, i) => (
+                    <Product {...item} key={i} />
+                ))}
+            </Slider>
 
         </section>
     );
