@@ -1,14 +1,17 @@
 import { useEffect } from 'react';
-import Categories from '../components/Layouts/Categories';
-import Banner from '../components/Home/Banner/Banner';
-import DealSlider from '../components/Home/DealSlider/DealSlider';
-import ProductSlider from '../components/Home/ProductSlider/ProductSlider';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { enqueueSnackbar, useSnackbar } from 'notistack';
-import MetaData from '../components/Layouts/MetaData';
 import { getSliderProducts } from '@/store/Features/Products/productSlice';
+import MetaData from '@/components/Layouts/MetaData';
+import Categories from '@/components/Layouts/Categories';
+import Banner from '@/components/Home/Banner/Banner';
+import DealSlider from '@/components/Home/DealSlider/DealSlider';
+import ProductSlider from '@/components/Home/ProductSlider/ProductSlider';
+import Header from '@/components/Layouts/Header/Header';
+import Footer from '@/components/Layouts/Footer/Footer';
 
-const Home = () => {
+const Index = () => {
     const dispatch = useDispatch();
     const { enqueueSnackbar } = useSnackbar();
 
@@ -26,6 +29,7 @@ const Home = () => {
 
     return (
         <>
+            <Header />
             <MetaData title="Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!" />
             <Categories />
             <main className="flex flex-col gap-3 px-2 mt-16 sm:mt-2">
@@ -52,8 +56,9 @@ const Home = () => {
                     />
                 )}
             </main>
+            <Footer />
         </>
     );
 };
 
-export default Home;
+export default Index;

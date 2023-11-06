@@ -1,18 +1,18 @@
 import SearchIcon from '@mui/icons-material/Search';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const Searchbar = () => {
 
     const [keyword, setKeyword] = useState("");
-    const navigate = useNavigate();
+    const navigate = useRouter();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(keyword.trim()){
-            navigate(`/products/${keyword}`)
+        if (keyword.trim()) {
+            navigate.push(`/products/${keyword}`)
         } else {
-            navigate('/products');
+            navigate.push('/products');
         }
     }
 

@@ -1,23 +1,23 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Searchbar from './Searchbar';
-import logo from '../../../assets/images/e-commerce.png';
-import PrimaryDropDownMenu from './PrimaryDropDownMenu';
-import SecondaryDropDownMenu from './SecondaryDropDownMenu';
+import logo from '@/assets/images/e-commerce.png';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
+import Searchbar from './Searchbar';
+import PrimaryDropDownMenu from './PrimaryDropDownMenu';
+import SecondaryDropDownMenu from './SecondaryDropDownMenu';
 
 const Header = () => {
 
     const { isAuthenticated, user } = useSelector((state) => state.user);
 
-    const { cartItems } = useSelector(state => state.cart);
+    // const { cartItems } = useSelector(state => state.cart);
+    const cartItems = [{}];
 
     const [togglePrimaryDropDown, setTogglePrimaryDropDown] = useState(false);
     const [toggleSecondaryDropDown, setToggleSecondaryDropDown] = useState(false);
-
     return (
 
         <header className="bg-primary-blue fixed top-0 py-2.5 w-full z-10">
@@ -28,7 +28,7 @@ const Header = () => {
                 {/* <!-- logo & search container --> */}
                 <div className="flex items-center flex-1">
                     <Link className="h-7 mr-1 sm:mr-4" href="/">
-                        <img draggable="false" className="h-full w-full object-contain" src={logo} alt="CortexLab E-Commerce Logo" />
+                        <img draggable="false" className="h-full w-full object-contain" src={logo.src} alt="CortexLab E-Commerce Logo" />
                     </Link>
 
                     <Searchbar />

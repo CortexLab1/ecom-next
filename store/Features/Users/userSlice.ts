@@ -30,9 +30,18 @@ const userSlice = createSlice({
             localStorage.removeItem('token');
             localStorage.removeItem('email');
         },
+        logoutUser: (state) => {
+            state.email = '';
+            state.id = '';
+            state.role = 'user';
+            localStorage.removeItem('id');
+            localStorage.removeItem('role');
+            localStorage.removeItem('token');
+            localStorage.removeItem('email');
+        },
     },
 });
 
-export const { setUser, handleLogout } = userSlice.actions;
+export const { setUser, handleLogout, logoutUser } = userSlice.actions;
 
 export default userSlice.reducer;

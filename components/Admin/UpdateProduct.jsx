@@ -293,7 +293,7 @@ const UpdateProduct = () => {
 
                         <div className="flex flex-col gap-1.5">
                             {highlights.map((h, i) => (
-                                <div className="flex justify-between rounded items-center py-1 px-2 bg-green-50">
+                                <div key={i} className="flex justify-between rounded items-center py-1 px-2 bg-green-50">
                                     <p className="text-green-800 text-sm font-medium">{h}</p>
                                     <span onClick={() => deleteHighlight(i)} className="text-red-600 hover:bg-red-100 p-1 rounded-full cursor-pointer">
                                         <DeleteIcon />
@@ -344,7 +344,7 @@ const UpdateProduct = () => {
 
                     <div className="flex flex-col gap-1.5">
                         {specs.map((spec, i) => (
-                            <div className="flex justify-between items-center text-sm rounded bg-blue-50 py-1 px-2">
+                            <div key={i} className="flex justify-between items-center text-sm rounded bg-blue-50 py-1 px-2">
                                 <p className="text-gray-500 font-medium">{spec.title}</p>
                                 <p>{spec.description}</p>
                                 <span onClick={() => deleteSpec(i)} className="text-red-600 hover:bg-red-200 bg-red-100 p-1 rounded-full cursor-pointer">

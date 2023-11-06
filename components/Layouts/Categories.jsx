@@ -57,7 +57,7 @@ const Categories = () => {
                 {catNav.map((item, i) => (
                     <Link href={`/products?category=${item.name}`} className="flex flex-col gap-1 items-center p-2 group" key={i}>
                         <div className="h-16 w-16">
-                            <img draggable="false" className="h-full w-full object-contain" src={item.icon} alt={item.name} />
+                            <img draggable="false" className="h-full w-full object-contain" src={item.icon?.src} alt={item.name} />
                         </div>
                         <span className="text-sm text-gray-800 font-medium group-hover:text-primary-blue">{item.name}</span>
                     </Link>

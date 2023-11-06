@@ -4,7 +4,7 @@ import StarsIcon from '@mui/icons-material/Stars';
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import HelpIcon from '@mui/icons-material/Help';
 import paymentMethods from '../../../assets/images/payment-methods.svg';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 const footerLinks = [
     {
@@ -111,12 +111,12 @@ const footerLinks = [
 
 const Footer = () => {
 
-    const location = useLocation();
+    // const location = useLocation();
     const [adminRoute, setAdminRoute] = useState(false);
 
-    useEffect(() => {
-        setAdminRoute(location.pathname.split("/", 2).includes("admin"))
-    }, [location]);
+    // useEffect(() => {
+    //     setAdminRoute(location.pathname.split("/", 2).includes("admin"))
+    // }, [location]);
 
     return (
         <>
@@ -182,7 +182,7 @@ const Footer = () => {
                         </a>
 
                         <span>&copy; 2007-{new Date().getFullYear()} CortexLab E-Commerce.com</span>
-                        <img draggable="false" src={paymentMethods} alt="Card Payment" />
+                        <img draggable="false" src={paymentMethods?.src} alt="Card Payment" />
                     </div>
                 </>
             )}

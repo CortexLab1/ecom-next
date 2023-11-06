@@ -5,15 +5,16 @@ import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
 import PriceSidebar from './PriceSidebar';
 import SaveForLaterItem from './SaveForLaterItem';
+import { useRouter } from 'next/router';
 
 const Cart = () => {
 
-    const navigate = useNavigate();
+    const navigate = useRouter();
     const { cartItems } = useSelector((state) => state.cart);
     const { saveForLaterItems } = useSelector((state) => state.saveForLater);
 
     const placeOrderHandler = () => {
-        navigate('/login?redirect=shipping');
+        navigate.push('/login?redirect=shipping');
     }
 
     return (
@@ -35,8 +36,8 @@ const Cart = () => {
                                 <EmptyCart />
                             )}
 
-                            {cartItems && cartItems.map((item) => (
-                                <CartItem {...item} inCart={true} />
+                            {cartItems && cartItems.map((item, i) => (
+                                <CartItem key={i} {...item} inCart={true} />
                             )
                             )}
 
@@ -52,8 +53,8 @@ const Cart = () => {
                         {/* <!-- saved for later items container --> */}
                         <div className="flex flex-col mt-5 shadow bg-white">
                             <span className="font-medium text-lg px-2 sm:px-8 py-4 border-b">Saved For Later ({saveForLaterItems.length})</span>
-                            {saveForLaterItems && saveForLaterItems.map((item) => (
-                                <SaveForLaterItem {...item} />
+                            {saveForLaterItems && saveForLaterItems.map((item, i) => (
+                                <SaveForLaterItem key={i} {...item} />
                             )
                             )}
                         </div>

@@ -10,22 +10,23 @@ import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSnackbar } from 'notistack';
-import { logoutUser } from '../../../actions/userAction';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { logoutUser } from '@/store/Features/Users/userSlice';
 
 const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    const navigate = useRouter();
     const { enqueueSnackbar } = useSnackbar();
 
     const { wishlistItems } = useSelector((state) => state.wishlist);
 
     const handleLogout = () => {
         dispatch(logoutUser());
-        navigate("/login");
+        navigate.push("/login");
         enqueueSnackbar("Logout Successfully", { variant: "success" });
         setTogglePrimaryDropDown(false);
     }

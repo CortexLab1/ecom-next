@@ -125,7 +125,7 @@ const Products = () => {
                                                     value={category}
                                                 >
                                                     {categories.map((el, i) => (
-                                                        <FormControlLabel value={el} control={<Radio size="small" />} label={<span className="text-sm" key={i}>{el}</span>} />
+                                                        <FormControlLabel key={i} value={el} control={<Radio size="small" />} label={<span className="text-sm" key={i}>{el}</span>} />
                                                     ))}
                                                 </RadioGroup>
                                             </FormControl>
