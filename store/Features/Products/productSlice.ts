@@ -48,7 +48,9 @@ export const getAdminProducts = createAsyncThunk(
 );
 interface IProductsState {
     productsLoading: boolean;
+    productDetailsLoading: boolean;
     products: Array<any>;
+    product: object;
     productsCount: number;
     resultPerPage: number;
     filteredProductsCount: number;
@@ -57,7 +59,9 @@ interface IProductsState {
 
 const initialState: IProductsState = {
     productsLoading: false,
+    productDetailsLoading: false,
     products: [],
+    product: {},
     productsCount: 0,
     resultPerPage: 0,
     filteredProductsCount: 0,
@@ -70,6 +74,9 @@ const productSlice = createSlice({
     reducers: {
         clearErrors: (state) => {
             state.error = null;
+        },
+        removeProductDetails: (state) => {
+            state.product = {};
         },
     },
     extraReducers: (builder) => {
@@ -111,6 +118,6 @@ const productSlice = createSlice({
     },
 });
 
-export const { clearErrors } = productSlice.actions;
+export const { clearErrors, removeProductDetails } = productSlice.actions;
 
 export default productSlice.reducer;

@@ -106,7 +106,7 @@ const ResetPassword = () => {
                             </form>
                             {/* <!-- input container --> */}
 
-                            <Link to="/register" class="font-medium text-sm text-primary-blue">New to CortexLab E-Commerce? Create an account</Link>
+                            <Link href="/register" class="font-medium text-sm text-primary-blue">New to CortexLab E-Commerce? Create an account</Link>
                         </div>
                         {/* <!-- edit info container --> */}
 

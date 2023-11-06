@@ -82,7 +82,7 @@ const ForgotPassword = () => {
                             </form>
                             {/* <!-- input container --> */}
 
-                            <Link to="/register" className="font-medium text-sm text-primary-blue">New to CortexLab E-Commerce? Create an account</Link>
+                            <Link href="/register" className="font-medium text-sm text-primary-blue">New to CortexLab E-Commerce? Create an account</Link>
                         </div>
                         {/* <!-- edit info container --> */}
 

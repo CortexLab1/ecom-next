@@ -27,7 +27,7 @@ const Header = () => {
 
                 {/* <!-- logo & search container --> */}
                 <div className="flex items-center flex-1">
-                    <Link className="h-7 mr-1 sm:mr-4" to="/">
+                    <Link className="h-7 mr-1 sm:mr-4" href="/">
                         <img draggable="false" className="h-full w-full object-contain" src={logo} alt="CortexLab E-Commerce Logo" />
                     </Link>
 
@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="flex items-center justify-between ml-1 sm:ml-0 gap-0.5 sm:gap-7 relative">
 
                     {isAuthenticated === false ?
-                        <Link to="/login" className="px-3 sm:px-9 py-0.5 text-primary-blue bg-white border font-medium rounded-sm cursor-pointer">Login</Link>
+                        <Link href="/login" className="px-3 sm:px-9 py-0.5 text-primary-blue bg-white border font-medium rounded-sm cursor-pointer">Login</Link>
                         :
                         (
                             <span className="userDropDown flex items-center text-white font-medium gap-1 cursor-pointer" onClick={() => setTogglePrimaryDropDown(!togglePrimaryDropDown)}>{user?.name && user?.name.split(" ", 1)}
@@ -56,7 +56,7 @@ const Header = () => {
 
                     {toggleSecondaryDropDown && <SecondaryDropDownMenu />}
 
-                    <Link to="/cart" className="flex items-center text-white font-medium gap-2 relative">
+                    <Link href="/cart" className="flex items-center text-white font-medium gap-2 relative">
                         <span><ShoppingCartIcon /></span>
                         {cartItems.length > 0 &&
                             <div className="w-5 h-5 p-2 bg-red-500 text-xs rounded-full absolute -top-2 left-3 flex justify-center items-center border">

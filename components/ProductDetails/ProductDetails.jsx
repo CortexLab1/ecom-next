@@ -259,7 +259,7 @@ const ProductDetails = () => {
                                     {/* <!-- seller details --> */}
                                     <div className="flex gap-16 mt-4 items-center text-sm font-medium">
                                         <p className="text-gray-500">Seller</p>
-                                        <Link className="font-medium text-primary-blue ml-3" to="/">{product.brand && product.brand.name}</Link>
+                                        <Link className="font-medium text-primary-blue ml-3" href="/">{product.brand && product.brand.name}</Link>
                                     </div>
                                     {/* <!-- seller details --> */}
 

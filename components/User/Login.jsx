@@ -86,7 +86,7 @@ const Login = () => {
                                     <div className="flex flex-col gap-2.5 mt-2 mb-32">
                                         <p className="text-xs text-primary-grey text-left">By continuing, you agree to CortexLab E-Commerce's <a href="/pages/terms" className="text-primary-blue"> Terms of Use</a> and <a href="/pages/privacypolicy" className="text-primary-blue"> Privacy Policy.</a></p>
                                         <button type="submit" className="text-white py-3 w-full bg-primary-orange shadow hover:shadow-lg rounded-sm font-medium">Login</button>
-                                        <Link to="/password/forgot" className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium">Forgot Password?</Link>
+                                        <Link href="/password/forgot" className="hover:bg-gray-50 text-primary-blue text-center py-3 w-full shadow border rounded-sm font-medium">Forgot Password?</Link>
                                     </div>
                                     {/* <!-- button container --> */}
 
@@ -94,7 +94,7 @@ const Login = () => {
                             </form>
                             {/* <!-- input container --> */}
 
-                            <Link to="/register" className="font-medium text-sm text-primary-blue">New to CortexLab E-Commerce? Create an account</Link>
+                            <Link href="/register" className="font-medium text-sm text-primary-blue">New to CortexLab E-Commerce? Create an account</Link>
                         </div>
                         {/* <!-- edit info container --> */}
 

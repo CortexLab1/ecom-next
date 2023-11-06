@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
-import Categories from '../components/Layouts/Categories';
-import Banner from '../components/Home/Banner/Banner';
-import DealSlider from '../components/Home/DealSlider/DealSlider';
-import ProductSlider from '../components/Home/ProductSlider/ProductSlider';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearErrors, getSliderProducts } from '../../actions/productAction';
 import { useSnackbar } from 'notistack';
 import MetaData from '../components/Layouts/MetaData';
+import '@/styles/Home.module.css'
+import Categories from '@/components/Layouts/Categories';
+import Banner from '@/components/Home/Banner/Banner';
+import DealSlider from '@/components/Home/DealSlider/DealSlider';
+import ProductSlider from '@/components/Home/ProductSlider/ProductSlider';
+import { clearErrors, getSliderProducts } from '@/store/Features/Products/productSlice';
 
 const Home = () => {
 

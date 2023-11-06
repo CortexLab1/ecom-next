@@ -6,6 +6,7 @@ import { useStore } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import * as NProgress from 'nprogress';
 import NextNProgress from 'nextjs-progressbar';
+import { wrapper } from '@/store/store';
 
 function App({ Component, pageProps }) {
     const store = useStore((state) => state);

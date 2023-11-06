@@ -77,13 +77,13 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
         <div className="absolute w-60 -left-24 ml-2 top-9 bg-white shadow-2xl rounded flex-col text-sm">
 
             {user?.role === "admin" &&
-                <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" to="/admin/dashboard">
+                <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" href="/admin/dashboard">
                     <span className="text-primary-blue"><DashboardIcon sx={{ fontSize: "18px" }} /></span>
                     Admin Dashboard
                 </Link>
             }
 
-            <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" to="/account">
+            <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50 rounded-t" href="/account">
                 <span className="text-primary-blue"><AccountCircleIcon sx={{ fontSize: "18px" }} /></span>
                 My Profile
             </Link>
@@ -94,7 +94,7 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
                 return (
                     <>
                         {title === "Wishlist" ? (
-                            <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50" to={redirect} key={i}>
+                            <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50" href={redirect || ''} key={i}>
                                 <span className="text-primary-blue">{icon}</span>
                                 {title}
                                 <span className="ml-auto mr-3 bg-gray-100 p-0.5 px-2 text-gray-600 rounded">
@@ -102,7 +102,7 @@ const PrimaryDropDownMenu = ({ setTogglePrimaryDropDown, user }) => {
                                 </span>
                             </Link>
                         ) : (
-                            <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50" to={redirect} key={i}>
+                            <Link className="pl-3 py-3.5 border-b flex gap-3 items-center hover:bg-gray-50" href={redirect || ''} key={i}>
                                 <span className="text-primary-blue">{icon}</span>
                                 {title}
                             </Link>

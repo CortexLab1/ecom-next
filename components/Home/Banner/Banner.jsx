@@ -1,5 +1,5 @@
 import Slider from 'react-slick';
-import './Banner.css';
+import './Banner.module.css';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import gadgetSale from '../../../assets/images/Banners/gadget-sale.jpg';

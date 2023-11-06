@@ -55,7 +55,7 @@ const Categories = () => {
             <div className="flex items-center justify-between mt-4">
 
                 {catNav.map((item, i) => (
-                    <Link to={`/products?category=${item.name}`} className="flex flex-col gap-1 items-center p-2 group" key={i}>
+                    <Link href={`/products?category=${item.name}`} className="flex flex-col gap-1 items-center p-2 group" key={i}>
                         <div className="h-16 w-16">
                             <img draggable="false" className="h-full w-full object-contain" src={item.icon} alt={item.name} />
                         </div>

@@ -8,6 +8,7 @@ import { createWrapper } from 'next-redux-wrapper';
 import userReducer from './Features/Users/userSlice';
 import productsReducer from './Features/Products/productSlice';
 import wishlistReducer from './Features/WishList/wishlistSlice';
+import autoMergeLevel1 from 'redux-persist/lib/stateReconciler/autoMergeLevel1';
 
 const storage = require('redux-persist/lib/storage').default;
 
@@ -36,7 +37,7 @@ const makeStore = ({ isServer }) => {
 
         const persistConfig = {
             key: 'nextjs',
-            whitelist: [user],
+            whitelist: ['user'],
             storage, // if needed, use a safer storage
             stateReconciler: autoMergeLevel1,
         };

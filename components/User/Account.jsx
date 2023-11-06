@@ -43,7 +43,7 @@ const Account = () => {
                                 <div className="flex flex-col gap-12 m-4 sm:mx-8 sm:my-6">
                                     {/* <!-- personal info --> */}
                                     <div className="flex flex-col gap-5 items-start">
-                                        <span className="font-medium text-lg">Personal Information <Link to="/account/update" className="text-sm text-primary-blue font-medium ml-8 cursor-pointer">Edit</Link></span>
+                                        <span className="font-medium text-lg">Personal Information <Link href="/account/update" className="text-sm text-primary-blue font-medium ml-8 cursor-pointer">Edit</Link></span>
 
                                         <div className="flex flex-col sm:flex-row items-center gap-3" id="personalInputs">
                                             <div className="flex flex-col gap-0.5 w-64 px-3 py-1.5 rounded-sm border inputs cursor-not-allowed bg-gray-100 focus-within:border-primary-blue">
@@ -78,8 +78,8 @@ const Account = () => {
                                     {/* <!-- email address info --> */}
                                     <div className="flex flex-col gap-5 items-start">
                                         <span className="font-medium text-lg">Email Address
-                                            <Link to="/account/update" className="text-sm text-primary-blue font-medium ml-3 sm:ml-8 cursor-pointer">Edit</Link>
-                                            <Link to="/password/update" className="text-sm text-primary-blue font-medium ml-3 sm:ml-8">Change Password</Link>
+                                            <Link href="/account/update" className="text-sm text-primary-blue font-medium ml-3 sm:ml-8 cursor-pointer">Edit</Link>
+                                            <Link href="/password/update" className="text-sm text-primary-blue font-medium ml-3 sm:ml-8">Change Password</Link>
                                         </span>
 
                                         <div className="flex items-center gap-3">
@@ -127,7 +127,7 @@ const Account = () => {
                                     {/* <!-- faqs --> */}
 
                                     {/* <!-- deactivate account --> */}
-                                    <Link className="text-sm text-primary-blue font-medium" to="/">Deactivate Account</Link>
+                                    <Link className="text-sm text-primary-blue font-medium" href="/">Deactivate Account</Link>
                                     {/* <!-- deactivate account --> */}
                                 </div>
                                 {/* <!-- edit info container --> */}

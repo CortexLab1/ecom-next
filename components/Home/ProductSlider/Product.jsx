@@ -30,7 +30,7 @@ const Product = (props) => {
     return (
         <div className="flex flex-col items-center gap-2 px-2 py-6 relative">
             {/* <!-- image & product title --> */}
-            <Link to={`/product/${_id}`} className="flex flex-col items-center text-center group">
+            <Link href={`/product/${_id}`} className="flex flex-col items-center text-center group">
                 <div className="w-36 h-36">
                     <img draggable="false" className="w-full h-full object-contain" src={images[0].url} alt={name} />
                 </div>
